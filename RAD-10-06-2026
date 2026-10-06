@@ -23,3 +23,53 @@ public class Diagnostic_Activity_DATATYPES {
         System.out.print("My name is " + name + ", I am " + age + " years old. " + "I live in " + address + ". My weight is " + weight + " and I measure about " + height );
     }
 }
+
+import java.util.Scanner;
+
+public class Diagnostic_Activity_SWITCHCASE {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        char again;
+
+        do {
+            System.out.print("Enter value of X: ");
+            double x = input.nextDouble();
+
+            System.out.print("Enter value of Y: ");
+            double y = input.nextDouble();
+
+            System.out.print("Choose operator (+, -, *, /): ");
+            char operator = input.next().charAt(0);
+
+            double result = 0;
+
+            switch (operator) {
+                case '+':
+                    result = x + y;
+                    break;
+                case '-':
+                    result = x - y;
+                    break;
+                case '*':
+                    result = x * y;
+                    break;
+                case '/':
+                    if (y == 0) {
+                        System.out.println("Cannot divide by zero.");
+                        return;
+                    }
+                    result = x / y;
+                    break;
+                default:
+                    System.out.println("Invalid operator.");
+                    return;
+            }
+
+            System.out.println("Result: " + result);
+
+            System.out.print("Do you want to continue?: ");
+            again = input.next().charAt(0);
+
+        } while (again == 'y' || again == 'Y');
+    }
+}
