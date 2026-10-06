@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Diagnostic_Activity_DATATYPES {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("What is your name? ");
+        String name = input.nextLine();
+
+        System.out.print("How old are you? ");
+        int age = input.nextInt();
+        input.nextLine();
+
+        System.out.print("What is your address? ");
+        String address = input.nextLine();
+
+        System.out.print("What is your weight (in kg)? ");
+        String weight = input.nextLine();
+
+        System.out.print("What is your height (in cm)? ");
+        String height = input.nextLine();
+
+        System.out.print("My name is " + name + ", I am " + age + " years old. " + "I live in " + address + ". My weight is " + weight + " and I measure about " + height );
+    }
+}
